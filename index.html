@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/1011/1011863.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="main">
+        <div class="cal">
+            <form>
+                <h1>CASIO</h1>
+                <div class="display">
+                    <input type="text" name="display" id="input1">
+                </div>
+                <div>
+                    <input type="button" value="AC" id="btn1" class="Lg" onclick="display.value = '' ">
+                    <input type="button" value="DE" id="btn2" class="Lg" onclick="display.value = display.value.toString().slice(0,-1)">
+                    <input type="button" value="." id="btn3" class="Lg" onclick="display.value += '.' ">
+                    <input type="button" value="/" id="btn4" class="Lg" onclick="display.value += '/' ">
+                </div>
+                <div>
+                    <input type="button" value="7" id="btn5" onclick="display.value += '7' ">
+                    <input type="button" value="8" id="btn6" onclick="display.value += '8' ">
+                    <input type="button" value="9" id="btn7" onclick="display.value += '9' ">
+                    <input type="button" value="*" id="btn8" class="Lg" onclick="display.value += '*' ">
+                </div>
+                <div>
+                    <input type="button" value="4" id="btn9" onclick="display.value += '4' ">
+                    <input type="button" value="5" id="btn10" onclick="display.value += '5' ">
+                    <input type="button" value="6" id="btn11" onclick="display.value += '6' ">
+                    <input type="button" value="-" id="btn12" class="Lg" onclick="display.value += '-' ">
+                </div>
+                <div>
+                    <input type="button" value="1" id="btn13" onclick="display.value += '1' ">
+                    <input type="button" value="2" id="btn14" onclick="display.value += '2' ">
+                    <input type="button" value="3" id="btn15" onclick="display.value += '3' ">
+                    <input type="button" value="+" id="btn16" class="Lg" onclick="display.value += '+' ">
+                </div>
+                <div>
+                    <input type="button" value="00" id="btn17" onclick="display.value += '00' ">
+                    <input type="button" value="0" id="btn18" onclick="display.value += '0' ">
+                    <input type="button" value="=" id="btn19" class="Lg" onclick="display.value = eval(display.value)">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
